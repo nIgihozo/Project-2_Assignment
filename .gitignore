@@ -1,0 +1,4 @@
+# Ignore Windows Executable files
+*.exe
+*.o
+*.out
