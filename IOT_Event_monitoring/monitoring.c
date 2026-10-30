@@ -62,7 +62,6 @@ void battery_monitor(Device *device) {
 }
 
 // 6. Custom Callback Function: Sensor Drift & Rapid Change Detector
-// Flags readings that shift by more than 15 units/degrees/volts from the previous state.
 void custom_drift_monitor(Device *device) {
     float current_val = 0.0f;
     if (device->type == 1) current_val = device->readings.temperature;
@@ -78,7 +77,7 @@ void custom_drift_monitor(Device *device) {
     device->prev_reading = current_val;
 }
 
-// 2. Dynamic Device Management: Register Device
+// 2. Dynamic Device Management
 void register_device(Device **devices, int *count, int *capacity) {
     int id, type;
     char name[40];
@@ -135,7 +134,7 @@ void register_device(Device **devices, int *count, int *capacity) {
     printf("Device registered successfully!\n");
 }
 
-// 2. Display All Registered Devices (Pointer Traversal)
+// 2. Display All Registered Devices
 void display_devices(Device *devices, int count) {
     if (count == 0) {
         printf("\nNo devices currently registered.\n");
@@ -166,7 +165,7 @@ void display_devices(Device *devices, int count) {
     }
 }
 
-// 2. Remove Device using ID (Shrinking Array via realloc)
+// 2. Remove Device using ID 
 void remove_device(Device **devices, int *count, int *capacity) {
     if (*count == 0) {
         printf("\nNo devices to remove.\n");
@@ -198,7 +197,7 @@ void remove_device(Device **devices, int *count, int *capacity) {
     }
     (*count)--;
 
-    // Shrink array capacity if size drops significantly (optional optimization)
+    // Shrink array capacity if size drops significantly
     if (*count > 0 && *count < *capacity / 4 && *capacity > 2) {
         *capacity /= 2;
         Device *temp = realloc(*devices, (*capacity) * sizeof(Device));
@@ -337,10 +336,10 @@ int main(void) {
         printf("6. Generate monitoring summary\n");
         printf("7. Exit program\n");
         printf("Enter your choice: ");
-        fflush(stdout);
+        
 
         if (scanf("%d", &choice) != 1) {
-            printf("Invalid input. Please enter a number between 1 and 7.\n");
+            printf("Invalid input. Please enter a number that are above.\n");
             while (getchar() != '\n');
             continue;
         }
@@ -368,7 +367,7 @@ int main(void) {
                 printf("Exiting program and freeing dynamically allocated memory...\n");
                 break;
             default:
-                printf("Choice out of range. Please choose between 1 and 7.\n");
+                printf("Choice out of range. Please choose the options that are on the menu above.\n");
         }
     } while (choice != 7);
 
