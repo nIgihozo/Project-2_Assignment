@@ -1,5 +1,6 @@
 ## Project Index & File Layout
 
+```text
 .
 ├── Mining-Analyzer/
 │   └── mining.c               # Text mining & word frequency analyzer
@@ -7,7 +8,7 @@
 │   └── main.c                 # Student performance & Academic Risk Index engine
 └── IOT_Event_Monitoring/
     └── main.c                 # IoT sensor simulation & callback engine
-
+```
 ----
 ### 1. Dynamic Text Mining & Linguistic Pattern Analyzer
 
@@ -53,5 +54,4 @@
 
 *Sensor Drift (Custom Callback):* Triggers alert if reading shifts by > 15.0 units from previous value.
 
-*Real-World Application:* Embedded microcontrollers, industrial telemetry monitoring systems, and automated anomaly detection platforms.
----
+**Real-World Application:** Embedded microcontrollers, industrial telemetry monitoring systems, and automated anomaly detection platforms.
