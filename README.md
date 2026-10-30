@@ -57,6 +57,7 @@
 *Sensor Drift (Custom Callback):* Triggers alert if reading shifts by > 15.0 units from previous value.
 
 **Real-World Application:** Embedded microcontrollers, industrial telemetry monitoring systems, and automated anomaly detection platforms.
+
 ----
 ### HOW TO RUN THIS
 Clone this repo
