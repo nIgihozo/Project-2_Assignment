@@ -4,12 +4,12 @@
 
 ```text
 .
-├── Mining-Analyzer/
-│   └── mining.c               # Text mining & word frequency analyzer
 ├── Academic-Performance/
-│   └── main.c                 # Student performance & Academic Risk Index engine
-└── IOT_Event_Monitoring/
-    └── main.c                 # IoT sensor simulation & callback engine
+│   └── main.c               # Student performance & Academic Risk Index engine
+├── IoT_Event_Monitoring/
+│   └── monitoring.c                 # IoT sensor simulation & callback engine
+└── Mining-Analyzer/
+    └── mining.c                 # Text mining & word frequency analyzer 
 ```
 ----
 ### 1. Dynamic Text Mining & Linguistic Pattern Analyzer
@@ -57,3 +57,10 @@
 *Sensor Drift (Custom Callback):* Triggers alert if reading shifts by > 15.0 units from previous value.
 
 **Real-World Application:** Embedded microcontrollers, industrial telemetry monitoring systems, and automated anomaly detection platforms.
+----
+### HOW TO RUN THIS
+Clone this repo
+```text
+git clone https://github.com/nIgihozo/Project-2_Assignment.git
+```
+**Note:** Make sure you have all the dependincies for C for you to be able to run.
