@@ -1,3 +1,5 @@
+# DYNAMIC MEMORY MANAGEMENT PROJECTS IN C
+
 ## Project Index & File Layout
 
 ```text
